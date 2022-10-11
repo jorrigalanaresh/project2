@@ -1,12 +1,12 @@
-pipeline{
+pipeline {
 	agent any
-		tool('maven'){
+		tool ('maven') {
 			maven "mvn363"
 			}
-		stages{
-			stage{
-				steps{ 
-					script{  
+		stages {
+			stage {
+				steps { 
+					script {  
 						sh 'mvn clean test package'
 						}
 					}
