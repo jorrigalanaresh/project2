@@ -1,13 +1,13 @@
 pipeline{
 	agent any
-		tool(maven){
-			maven 'mvn363'
+		tool('maven'){
+			maven "mvn363"
 			}
 		stages{
 			stage{
 				steps{ 
 					script{  
-						'mvn clean test package'
+						sh 'mvn clean test package'
 						}
 					}
 				}
