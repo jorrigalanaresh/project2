@@ -1,15 +1,14 @@
 pipeline {
     agent any
-	tool ('maven') {
-		maven "mvn363"
-	}
-	stages {
-	    stage {
-	       steps { 
-	         script {  
-			sh 'mvn clean test package'
-	     }
-	 }
-     }
-   }
-}
+    tools {
+        maven "mvn 363"
+    }
+    stages {
+        stage('maven 363') {
+          steps {
+              script{ 
+                  sh "mvn clean package"
+              }
+          }
+        }
+    }
